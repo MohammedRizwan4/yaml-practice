@@ -1,0 +1,48 @@
+# key value pairs 
+# like dictionary
+# one call document
+"apple" : "I am a red fruit"
+1: "This is my roll no"
+---
+# lists
+- apple
+- banana
+- orange
+- Apple # case sensitive
+---
+# use spaces not tabs
+# block style
+cities:
+ - new delhi
+ - mumbai
+ - bangalore
+---
+# flow style
+cities: [new delhi, mumbai, bangalore]
+---
+{mango: 10, apple: 20, orange: 30}
+---
+# nested lists
+cities:
+  - new delhi
+  - mumbai
+  - bangalore
+  - - chennai
+    - hyderabad
+    - kolkata
+---
+# nested dictionaries
+cities:
+  - new delhi
+  - mumbai
+  - bangalore
+  - - chennai
+    - hyderabad
+    - kolkata
+  - - name: chennai
+      population: 1000000
+    - name: hyderabad
+      population: 2000000
+    - name: kolkata
+      population: 3000000
+ ...

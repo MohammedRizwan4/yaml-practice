@@ -1,0 +1,93 @@
+student: !!seq
+ - Mark McGwire
+ - Sammy Sosa
+ - Ken Griffey
+
+# like this also
+cities: [new delhi, mumbai, kolkata, chennai, bangalore]
+
+# some type key will be empty
+sparse seq: 
+ - hey
+ - how
+ - are
+ - 
+ - Null
+ - sim
+
+# nested lists
+
+-
+ - 1
+ - 2
+ - 3
+- 
+ - 4
+ - 5
+ - 6
+
+
+# key value pairs called hash maps
+!!map
+
+#nested mapping
+
+name: mohammed rizwan
+role: 
+ age: 78
+ job: student
+
+# same as
+name: mohammed rizwan
+role: { age: 78, job: student}
+
+# pairs: keys may have duplicate values
+
+pair example: !!pair
+ - job: student
+ - job: teacher
+
+# this will be hash table containing hash table
+# same as
+
+pair example: !!pair [ job: student, job: teacher ]
+
+
+# set will allow unique values on items no key value
+
+names: !!set
+ ? mohammed
+ ? rizwan
+ ? raiyan
+ ? champakkaka
+
+# dictionary !!omap
+
+people: !!omap
+ - mohammed: 
+    name: mohammed
+    age: 78
+    height: 8.9
+ - rizwan:
+    name: rizwan
+    age: 78
+    height: 8.9
+
+# reusing properties using anchors
+
+# &anchor_name
+
+# *anchor_name
+likings: &likes
+ fav fruit: apple
+ dislikes: grapes
+
+person1: 
+ name: rahul kumar
+ <<: *likes
+
+# here itl will override the dislikes
+person1: 
+ name: rahul kumar
+ <<: *likes
+ dislikes: mango

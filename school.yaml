@@ -1,0 +1,8 @@
+---
+Schools:
+- name: DPS
+  principal: Someone
+  Students:
+  - rno: 12
+    name: Rahul
+    marks: 67
